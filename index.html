@@ -1,0 +1,93 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
+  <title>meseum</title>
+  <link rel="stylesheet" type="text/css" href="art_log.css">
+
+</head>
+<body>
+
+	<!--  <div id='data'>デバッグ用データを表示します。</div> -->
+
+	<header>
+		<nav class='navbar'>
+		<ul class="nav">
+			<li class="nav-item"><a href="index.html">Home</a> </li>
+		</ul>
+			<div id='headerInfo' class='header-info'><h2></h2></div>
+		</nav>
+
+	</header>
+
+	<div id='data'></div>
+	<div id='text'></div>
+	<!-- タグボタン  -->
+	<div id='tagButtonList'class='tag-button-list'>
+		
+		<button id='tag_button' class='tag-button1' value="Vincent van Gogh">ゴッホ</button>
+		<button id='tag_button' class='tag-button2' value="Vermeer">フェルメール</button>
+		<button id='tag_button' class='tag-button3' value="Claude Monet">モネ</button>
+		<button id='tag_button' class='tag-button4' value="Paul Cézanne">セザンヌ</button>
+		<button id='tag_button' class='tag-button5' value="spring">はる</button>
+		<button id='tag_button' class='tag-button6' value="summer">なつ</button>
+		<button id='tag_button' class='tag-button7' value="autumn">あき</button>
+		<button id='tag_button' class='tag-button8' value="winter">ふゆ</button>
+
+	</div>
+
+	<!-- サムネイルの一覧を表示するul  -->
+	<div id='contents' class= 'contents'>
+		<ul id='thumbnail_list' class='thumbnail-list'></ul>
+		<div class="readMoreBtn">
+    		<span class="moreText">もっと見る</span><span class="arrowDown"></span>
+  		</div>
+ 	</div>
+
+	<!-- 詳細ページ -->
+	<div id='details' class='details'>
+		<div id='primaryImage' class='primary-image'>
+			<img arc="">
+			<div class=canvas>		
+				<canvas id="canvas" width ="600"  height="600" style="border:1px solid black;"></canvas>
+				<label>色<input id="color" type="color"></label>
+				<label>太さ<input id="width" type="number" min="1" max="30"></label>
+				<input type="button" id="delete_canvas" value="クリア" onClick="delete_canvas()">
+				<input type="image" id="pencil" src="./img/pencil.png" width="35px" class="active" onClick="tool(1)">
+				<input type="image" id="eraser" src="./img/eraser.png" width="35px" onClick="tool(2)">
+				<a id="download" href="#" download="canvas.png">ダウンロード</a>
+			</div>								
+		</div>
+
+		<div class='details-document'>
+			<ul class="artist-detail">
+				<li class='artistDisplayName'></li>
+				<li class='artistCountry'></li>
+				<li class='artistBirth'></li>
+				<li class='artistDisplayBio'></li>
+			</ul>
+			<ul class="artWork-detail">
+				<li class="title"></li>
+				<li class="objectDate"></li>
+				<li class="medium"></li>
+				<li class="dimensions"></li>
+				<li class='tags'></li>
+			</ul>
+		</div>
+
+  
+	</div>
+
+
+<!-- JQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- JQuery -->
+
+
+</body>
+
+<script type='text/javascript' src="art_log.js">
+
+</script>
+
+</html>
